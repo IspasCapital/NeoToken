@@ -17,7 +17,7 @@ def manifest_metadata() -> NeoMetadata:
     meta.add_permission(methods=['onNEP17Payment'])
     meta.add_permission(contract='0xef4073a0f2b305a38ec4050e4d3d28bc40ea63f5')
     meta.author = "Denis"
-    meta.email = "denis.neo.hk@gmail.com"
+    meta.email = "zzz"
     meta.description = "NeoDeposit"
     return meta
 
