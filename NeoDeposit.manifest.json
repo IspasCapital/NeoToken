@@ -1,0 +1,213 @@
+{
+    "name": "NeoDeposit",
+    "groups": [],
+    "abi": {
+        "methods": [
+            {
+                "name": "symbol",
+                "offset": 0,
+                "parameters": [],
+                "safe": true,
+                "returntype": "String"
+            },
+            {
+                "name": "decimals",
+                "offset": 2,
+                "parameters": [],
+                "safe": true,
+                "returntype": "Integer"
+            },
+            {
+                "name": "totalSupply",
+                "offset": 4,
+                "parameters": [],
+                "safe": true,
+                "returntype": "Integer"
+            },
+            {
+                "name": "maxSupply",
+                "offset": 25,
+                "parameters": [],
+                "safe": true,
+                "returntype": "Integer"
+            },
+            {
+                "name": "balanceOf",
+                "offset": 27,
+                "parameters": [
+                    {
+                        "type": "Hash160",
+                        "name": "account"
+                    }
+                ],
+                "safe": true,
+                "returntype": "Integer"
+            },
+            {
+                "name": "transfer",
+                "offset": 106,
+                "parameters": [
+                    {
+                        "type": "Hash160",
+                        "name": "from_address"
+                    },
+                    {
+                        "type": "Hash160",
+                        "name": "to_address"
+                    },
+                    {
+                        "type": "Integer",
+                        "name": "amount"
+                    },
+                    {
+                        "type": "Any",
+                        "name": "data"
+                    }
+                ],
+                "safe": false,
+                "returntype": "Boolean"
+            },
+            {
+                "name": "mint",
+                "offset": 304,
+                "parameters": [
+                    {
+                        "type": "Hash160",
+                        "name": "from_address"
+                    },
+                    {
+                        "type": "Integer",
+                        "name": "amount"
+                    }
+                ],
+                "safe": false,
+                "returntype": "Void"
+            },
+            {
+                "name": "burn",
+                "offset": 473,
+                "parameters": [
+                    {
+                        "type": "Hash160",
+                        "name": "from_address"
+                    },
+                    {
+                        "type": "Integer",
+                        "name": "amount"
+                    }
+                ],
+                "safe": false,
+                "returntype": "Void"
+            },
+            {
+                "name": "onNEP17Payment",
+                "offset": 677,
+                "parameters": [
+                    {
+                        "type": "Hash160",
+                        "name": "from_address"
+                    },
+                    {
+                        "type": "Integer",
+                        "name": "amount"
+                    },
+                    {
+                        "type": "Any",
+                        "name": "data"
+                    }
+                ],
+                "safe": false,
+                "returntype": "Void"
+            },
+            {
+                "name": "vote_for_node",
+                "offset": 753,
+                "parameters": [
+                    {
+                        "type": "PublicKey",
+                        "name": "node_public_key"
+                    }
+                ],
+                "safe": false,
+                "returntype": "Boolean"
+            },
+            {
+                "name": "revoke_vote",
+                "offset": 929,
+                "parameters": [],
+                "safe": false,
+                "returntype": "Boolean"
+            },
+            {
+                "name": "_deploy",
+                "offset": 1105,
+                "parameters": [
+                    {
+                        "type": "Any",
+                        "name": "data"
+                    },
+                    {
+                        "type": "Boolean",
+                        "name": "update"
+                    }
+                ],
+                "safe": false,
+                "returntype": "Void"
+            },
+            {
+                "name": "_initialize",
+                "offset": 1171,
+                "parameters": [],
+                "safe": false,
+                "returntype": "Void"
+            }
+        ],
+        "events": [
+            {
+                "name": "Transfer",
+                "parameters": [
+                    {
+                        "name": "from_addr",
+                        "type": "Any"
+                    },
+                    {
+                        "name": "to_addr",
+                        "type": "Any"
+                    },
+                    {
+                        "name": "amount",
+                        "type": "Integer"
+                    }
+                ]
+            }
+        ]
+    },
+    "permissions": [
+        {
+            "contract": "*",
+            "methods": [
+                "onNEP17Payment"
+            ]
+        },
+        {
+            "contract": "0xef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
+            "methods": "*"
+        },
+        {
+            "contract": "0xfffdc93764dbaddd97c48f252a53ea4643faa3fd",
+            "methods": [
+                "getContract"
+            ]
+        }
+    ],
+    "trusts": [],
+    "features": {},
+    "supportedstandards": [
+        "NEP-17"
+    ],
+    "extra": {
+        "Author": "Denis",
+        "Email": "denis.neo.hk@gmail.com",
+        "Description": "NeoDeposit"
+    }
+}
